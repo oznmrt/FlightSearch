@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{361C0F5D-A945-4D7B-8FCA-32230BD6D747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.API", "src\FlightSearch.API\FlightSearch.API.csproj", "{8BD33D85-5235-4318-81BE-962441F648B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HopeAir.Provider", "src\Providers\HopeAir.Provider\HopeAir.Provider.csproj", "{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AybJet.Provider", "src\Providers\AybJet.Provider\AybJet.Provider.csproj", "{14727301-43C0-4B48-AFC5-1CDD09EB1E33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BD33D85-5235-4318-81BE-962441F648B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD33D85-5235-4318-81BE-962441F648B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD33D85-5235-4318-81BE-962441F648B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD33D85-5235-4318-81BE-962441F648B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14727301-43C0-4B48-AFC5-1CDD09EB1E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14727301-43C0-4B48-AFC5-1CDD09EB1E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14727301-43C0-4B48-AFC5-1CDD09EB1E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14727301-43C0-4B48-AFC5-1CDD09EB1E33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BD33D85-5235-4318-81BE-962441F648B1} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
+		{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
+		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A} = {BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}
+		{14727301-43C0-4B48-AFC5-1CDD09EB1E33} = {BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04054210-8AE4-4069-8FC0-C2A28991FC3A}
+	EndGlobalSection
+EndGlobal

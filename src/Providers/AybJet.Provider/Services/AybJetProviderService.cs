@@ -1,6 +1,6 @@
 ﻿using AybJet.Provider.Models;
-using FlightSearch.Common.Application.DTOs;
 using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Core.Models;
 using FlightSearch.Common.MockGenerator;
 using Newtonsoft.Json;
 

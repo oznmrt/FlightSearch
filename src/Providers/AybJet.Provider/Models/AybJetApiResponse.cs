@@ -1,4 +1,4 @@
-﻿using FlightSearch.Common.Application.DTOs;
+﻿using FlightSearch.Common.Core.Models;
 
 namespace AybJet.Provider.Models;
 

@@ -1,9 +1,11 @@
 ﻿using FlightSearch.Common.Application.Providers;
 using FlightSearch.Common.Core.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AybJet.Provider.Controllers;
+namespace HopeAir.Provider.Controllers;
 
+// todo - ozan: controller will be changed as soap api
 [Route("api/[controller]")]
 [ApiController]
 public class SearchController(IFlightSearchProvider _flightSearchProvider) : ControllerBase

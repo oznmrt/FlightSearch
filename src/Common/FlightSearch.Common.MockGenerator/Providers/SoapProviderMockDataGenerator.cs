@@ -1,4 +1,5 @@
 ﻿
+using FlightSearch.Common.Core.Constants;
 using System.Xml.Linq;
 
 namespace FlightSearch.Common.MockGenerator.Providers;
@@ -7,7 +8,7 @@ public class SoapProviderMockDataGenerator : IProviderMockGenerator
 {
     public string GenerateMockResponse(string origin, string destination, DateTime departureDate)
     {
-        var flightList = FlightMockDataGenerator.GenerateMockFlights(origin, destination, departureDate);
+        var flightList = FlightMockDataGenerator.GenerateMockFlights(ProviderConstants.HopeAir, origin, destination, departureDate);
         var xDocument = new XDocument(
             new XElement("Flights",
                 flightList.Select(flight => new XElement("Flight",

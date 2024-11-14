@@ -1,9 +1,9 @@
-﻿using FlightSearch.Common.Application.DTOs;
+﻿
+using FlightSearch.Common.Core.Models;
 
 namespace FlightSearch.Common.Application.Providers;
 
 public interface IFlightSearchProvider
 {
-    // Ortak SearchFlights methodu
     Task<List<FlightData>> SearchFlightsAsync(string origin, string destination, DateTime departureDate);
 }

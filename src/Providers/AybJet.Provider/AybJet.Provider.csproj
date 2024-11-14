@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\Common\FlightSearch.Common.Application\FlightSearch.Common.Application.csproj" />
+    <ProjectReference Include="..\..\Common\FlightSearch.Common.MockGenerator\FlightSearch.Common.MockGenerator.csproj" />
   </ItemGroup>
 
 </Project>

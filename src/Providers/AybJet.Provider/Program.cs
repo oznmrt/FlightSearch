@@ -1,3 +1,7 @@
+using AybJet.Provider.Services;
+using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.MockGenerator;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<IFlightSearchProvider, AybJetProviderService>();
+builder.Services.AddJsonMockGenerator();
 
 var app = builder.Build();
 

@@ -1,4 +1,5 @@
-﻿using FlightSearch.Common.Core.Interfaces;
+﻿using FlightSearch.API.Extensions;
+using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.Core.Models;
 using FlightSearch.Common.GenericHttpClient.HttpClients.Interfaces;
 
@@ -13,16 +14,17 @@ public class FlightSearchService(IAybJetHttpClient aybJetHttpClient, IHopeAirHtt
     {
         var tasks = new List<Task<IEnumerable<FlightData>>>
         {
-            _aybJetHttpClient.GetAsync<FlightSearchRequest, IEnumerable<FlightData>>("Search", request, cancellationToken),
-            _hopeAirHttpClient.GetAsync<FlightSearchRequest, IEnumerable<FlightData>>("Search", request, cancellationToken)
+            // SafeApiCall is used to handle any issues during the API call, returning null data in case of failure.
+            _aybJetHttpClient.GetAsync<FlightSearchRequest, IEnumerable<FlightData>>("Search", request, cancellationToken).SafeApiCall(),
+            _hopeAirHttpClient.GetAsync<FlightSearchRequest, IEnumerable<FlightData>>("Search", request, cancellationToken).SafeApiCall()
         };
 
         var results = await Task.WhenAll(tasks);
         // Flatten and order by Price
         return results
-            .Where(r => r != null)                       // Ensure no null results
-            .SelectMany(r => r)                          // Flatten IEnumerable<IEnumerable<FlightData>> to IEnumerable<FlightData>
-            .OrderBy(f => f.Price)                       // Order by Price
-            .ToList();                                   // Convert to a List
+            .Where(r => r != null)
+            .SelectMany(r => r)
+            .OrderBy(f => f.Price)
+            .ToList();
     }
 }

@@ -1,33 +1,65 @@
-﻿using System.Xml.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace FlightSearch.Common.Core.Models;
 
-public class FlightData
+public class FlightData : IFlightData
 {
-    [XmlElement("FlightNumber")]
+    [JsonProperty("flightNumber")]
     public string FlightNumber { get; set; }
 
-    [XmlElement("Departure")]
+    [JsonProperty("departure")]
     public string Departure { get; set; }
 
-    [XmlElement("Arrival")]
+    [JsonProperty("arrival")]
     public string Arrival { get; set; }
 
-    [XmlElement("Price")]
+    [JsonProperty("price")]
     public double Price { get; set; }
 
-    [XmlElement("Currency")]
+    [JsonProperty("currency")]
     public string Currency { get; set; }
 
-    [XmlElement("DepartureTime")]
+    [JsonProperty("departureTime")]
     public string DepartureTime { get; set; }
 
-    [XmlElement("ArrivalTime")]
+    [JsonProperty("arrivalTime")]
     public string ArrivalTime { get; set; }
 
-    [XmlElement("Duration")]
+    [JsonProperty("duration")]
     public string Duration { get; set; }
 
-    [XmlElement("ProviderName")]
+    [JsonProperty("providerName")]
+    public string ProviderName { get; set; }
+}
+
+public class FlightDataXML : IFlightData
+{
+    [XmlElement("flightNumber")]
+    public string FlightNumber { get; set; }
+
+    [XmlElement("departure")]
+    public string Departure { get; set; }
+
+    [XmlElement("arrival")]
+    public string Arrival { get; set; }
+
+    [XmlElement("price")]
+    public double Price { get; set; }
+
+    [XmlElement("currency")]
+    public string Currency { get; set; }
+
+    [XmlElement("departureTime")]
+    public string DepartureTime { get; set; }
+
+    [XmlElement("arrivalTime")]
+    public string ArrivalTime { get; set; }
+
+    [XmlElement("duration")]
+    public string Duration { get; set; }
+
+    [XmlElement("providerName")]
     public string ProviderName { get; set; }
 }

@@ -18,6 +18,7 @@ public class AybJetProviderService(IProviderMockGenerator mockGenerator) : Fligh
 
     protected override Task<string> GetFlightDataAsync(string origin, string destination, DateTime departureDate)
     {
+        // API call for REST service
         return Task.FromResult(_mockGenerator.GenerateMockResponse(origin, destination, departureDate));
     }
 }

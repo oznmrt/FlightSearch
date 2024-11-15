@@ -26,6 +26,8 @@ public abstract class BaseHttpClient : IBaseHttpClient
     {
         _config = provider.GetRequiredService<ClientConfig>();
         _httpClient = provider.GetRequiredService<HttpClient>();
+
+        _httpClient.Timeout = TimeSpan.FromMilliseconds(ProviderConfig.Timeout.HasValue ? ProviderConfig.Timeout.Value : ClientConfig.DefaultTimeout);
     }
 
     public abstract ProviderType ProviderType { get; }

@@ -1,5 +1,5 @@
-﻿
-using FlightSearch.Common.Core.Constants;
+﻿using FlightSearch.Common.Core.Constants;
+using FlightSearch.Common.Core.Enums;
 using Newtonsoft.Json;
 
 namespace FlightSearch.Common.MockGenerator.Providers;

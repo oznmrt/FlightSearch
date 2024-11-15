@@ -1,5 +1,6 @@
 using AybJet.Provider.Services;
 using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.MockGenerator;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IFlightSearchProvider, AybJetProviderService>();
+builder.Services.AddTransient<IFlightSearchService, AybJetProviderService>();
 builder.Services.AddJsonMockGenerator();
 
 var app = builder.Build();

@@ -1,4 +1,5 @@
 ﻿using FlightSearch.Common.Core.Constants;
+using FlightSearch.Common.Core.Enums;
 using System.Xml.Linq;
 
 namespace FlightSearch.Common.MockGenerator.Providers;

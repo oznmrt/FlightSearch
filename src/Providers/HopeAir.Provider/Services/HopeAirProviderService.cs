@@ -3,9 +3,6 @@ using FlightSearch.Common.Core.Models;
 using FlightSearch.Common.MockGenerator;
 using FlightSearch.Common.Utilities.Extensions;
 using HopeAir.Provider.Models;
-using System.Xml;
-using System.Xml.Linq;
-using System.Xml.Serialization;
 
 namespace HopeAir.Provider.Services;
 

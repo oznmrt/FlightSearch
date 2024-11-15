@@ -1,4 +1,5 @@
 using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.MockGenerator;
 using HopeAir.Provider.Services;
 
@@ -11,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IFlightSearchProvider, HopeAirProviderService>();
+builder.Services.AddTransient<IFlightSearchService, HopeAirProviderService>();
 builder.Services.AddSoapMockGenerator();
 
 var app = builder.Build();

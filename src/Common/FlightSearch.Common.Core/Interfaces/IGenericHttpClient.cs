@@ -1,8 +1,8 @@
 ﻿using FlightSearch.Common.Core.Models;
 
-namespace FlightSearch.Common.Application.Providers;
+namespace FlightSearch.Common.Core.Interfaces;
 
-public interface IFlightSearchProvider
+public interface IGenericHttpClient
 {
     Task<IEnumerable<IFlightData>> SearchFlightsAsync(string origin, string destination, DateTime departureDate);
 }

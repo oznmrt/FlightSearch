@@ -7,23 +7,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF53CEEA-41F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{361C0F5D-A945-4D7B-8FCA-32230BD6D747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.API", "src\FlightSearch.API\FlightSearch.API.csproj", "{8BD33D85-5235-4318-81BE-962441F648B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.API", "src\FlightSearch.API\FlightSearch.API.csproj", "{8BD33D85-5235-4318-81BE-962441F648B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HopeAir.Provider", "src\Providers\HopeAir.Provider\HopeAir.Provider.csproj", "{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HopeAir.Provider", "src\Providers\HopeAir.Provider\HopeAir.Provider.csproj", "{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AybJet.Provider", "src\Providers\AybJet.Provider\AybJet.Provider.csproj", "{14727301-43C0-4B48-AFC5-1CDD09EB1E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AybJet.Provider", "src\Providers\AybJet.Provider\AybJet.Provider.csproj", "{14727301-43C0-4B48-AFC5-1CDD09EB1E33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{62268EBE-3512-491F-92FF-A44D65FE0565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.Core", "src\Common\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj", "{0C8F6AF9-E234-48BA-8C2A-B154FC267DD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Core", "src\Common\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj", "{0C8F6AF9-E234-48BA-8C2A-B154FC267DD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.Utilities", "src\Common\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj", "{1830F76E-F3E1-4508-ABA5-5CA5BD7D85A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Utilities", "src\Common\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj", "{1830F76E-F3E1-4508-ABA5-5CA5BD7D85A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.MockGenerator", "src\Common\FlightSearch.Common.MockGenerator\FlightSearch.Common.MockGenerator.csproj", "{612F4AF0-6027-4378-8539-EE4A1A6E6430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.MockGenerator", "src\Common\FlightSearch.Common.MockGenerator\FlightSearch.Common.MockGenerator.csproj", "{612F4AF0-6027-4378-8539-EE4A1A6E6430}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.Application", "src\Common\FlightSearch.Common.Application\FlightSearch.Common.Application.csproj", "{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Application", "src\Common\FlightSearch.Common.Application\FlightSearch.Common.Application.csproj", "{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.GenericHttpClient", "src\Common\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj", "{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{1830F76E-F3E1-4508-ABA5-5CA5BD7D85A2} = {62268EBE-3512-491F-92FF-A44D65FE0565}
 		{612F4AF0-6027-4378-8539-EE4A1A6E6430} = {62268EBE-3512-491F-92FF-A44D65FE0565}
 		{AC0CCB87-A574-4694-9C1F-24517D7D4A7B} = {62268EBE-3512-491F-92FF-A44D65FE0565}
+		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074} = {62268EBE-3512-491F-92FF-A44D65FE0565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04054210-8AE4-4069-8FC0-C2A28991FC3A}

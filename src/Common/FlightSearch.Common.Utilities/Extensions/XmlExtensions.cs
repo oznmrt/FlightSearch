@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace FlightSearch.Common.Utilities.Extensions;
 
-public static class XmlHelper
+public static class XmlExtensions
 {
     public static TModel ConvertSoapXML<TModel>(this string xml) where TModel : class
     {

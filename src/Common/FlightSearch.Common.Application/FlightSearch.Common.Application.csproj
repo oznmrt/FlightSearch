@@ -11,4 +11,8 @@
     <ProjectReference Include="..\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
 </Project>

@@ -15,7 +15,7 @@ public class SoapProviderMockDataGenerator : IProviderMockGenerator
         XNamespace sky = "http://skyblue.com/flight";
 
         // Generate the XML structure
-        XElement xDocument = new XElement(soapenv + "Envelope",
+        XElement xDocument = new(soapenv + "Envelope",
             new XAttribute(XNamespace.Xmlns + "soapenv", soapenv),
             new XAttribute(XNamespace.Xmlns + "sky", sky),
             new XElement(soapenv + "Body",

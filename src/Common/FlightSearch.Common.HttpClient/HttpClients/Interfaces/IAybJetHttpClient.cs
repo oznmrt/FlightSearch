@@ -1,5 +1,3 @@
 ﻿namespace FlightSearch.Common.GenericHttpClient.HttpClients.Interfaces;
 
-public interface IAybJetHttpClient : IBaseHttpClient
-{
-}
+public interface IAybJetHttpClient : IBaseHttpClient;

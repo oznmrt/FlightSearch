@@ -4,7 +4,7 @@ namespace FlightSearch.Common.GenericHttpClient.Configs;
 
 public class ClientConfig
 {
-    public static readonly string SECTION = $"HttpClients";
+    public static readonly string SECTION = "HttpClients";
 
     public static readonly int DefaultTimeout = 30 * 1000;
     public Dictionary<ProviderType, ProviderClientConfig> Providers { get; set; } = [];

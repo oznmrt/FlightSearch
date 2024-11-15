@@ -11,7 +11,7 @@ public static class ApiExtensions
         catch (Exception ex)
         {
             // Log error if necessary
-            return default(T)!; // Or return an appropriate fallback value like an empty list
+            return default!; // Or return an appropriate fallback value like an empty list
         }
     }
 }

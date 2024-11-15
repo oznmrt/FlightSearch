@@ -17,7 +17,7 @@ public abstract class BaseHttpClient : IBaseHttpClient
         get
         {
             if (!_config.Providers.TryGetValue(ProviderType, out var providerType))
-                throw new Exception($"Missing ProviderClient for {ProviderType}");
+                throw new InvalidOperationException($"Missing ProviderClient for {ProviderType}");
             return providerType;
         }
     }

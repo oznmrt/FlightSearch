@@ -1,5 +1,6 @@
 ﻿using FlightSearch.Common.Core.Enums;
 using FlightSearch.Common.GenericHttpClient.Configs;
+using FlightSearch.Common.GenericHttpClient.Extensions;
 using FlightSearch.Common.Utilities.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -11,7 +12,7 @@ public abstract class BaseHttpClient : IBaseHttpClient
     protected readonly HttpClient _httpClient;
     protected readonly ClientConfig _config;
 
-    protected ProviderClientConfig _providerConfig
+    protected ProviderClientConfig ProviderConfig
     {
         get
         {
@@ -31,19 +32,19 @@ public abstract class BaseHttpClient : IBaseHttpClient
 
     public async Task<TResponse> DeleteAsync<TResponse>(string url, CancellationToken token = default) where TResponse : class
     {
-        var requestUrl = _providerConfig.BaseUrl.CombineUrls(url);
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
         var response = await _httpClient.DeleteAsync(requestUrl, token);
 
         // Timeout or failed request check
         response.EnsureSuccessStatusCode();
 
-        var responseBody = await response.Content.ReadAsStringAsync();
+        var responseBody = await response.Content.ReadAsStringAsync(token);
         return JsonConvert.DeserializeObject<TResponse>(responseBody)!;
     }
 
     public async Task DeleteAsync(string url, CancellationToken token = default)
     {
-        var requestUrl = _providerConfig.BaseUrl.CombineUrls(url);
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
         var response = await _httpClient.DeleteAsync(requestUrl, token);
 
         // Timeout or failed request check
@@ -52,45 +53,57 @@ public abstract class BaseHttpClient : IBaseHttpClient
 
     public async Task<TResponse> GetAsync<TResponse>(string url, CancellationToken token = default) where TResponse : class
     {
-        var requestUrl = _providerConfig.BaseUrl.CombineUrls(url);
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
         var response = await _httpClient.GetAsync(requestUrl, token);
 
         // Timeout or failed request check
         response.EnsureSuccessStatusCode();
 
-        var responseBody = await response.Content.ReadAsStringAsync();
+        var responseBody = await response.Content.ReadAsStringAsync(token);
+        return JsonConvert.DeserializeObject<TResponse>(responseBody)!;
+    }
+
+    public async Task<TResponse> GetAsync<TRequest, TResponse>(string url, TRequest request, CancellationToken token = default) where TRequest : class where TResponse : class
+    {
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
+        var response = await _httpClient.GetAsync($"{requestUrl}?{request.ToQueryString()}", token);
+
+        // Timeout or failed request check
+        response.EnsureSuccessStatusCode();
+
+        var responseBody = await response.Content.ReadAsStringAsync(token);
         return JsonConvert.DeserializeObject<TResponse>(responseBody)!;
     }
 
     public async Task<TResponse> PostAsync<TRequest, TResponse>(string url, TRequest request, CancellationToken token = default) where TRequest : class where TResponse : class
     {
-        var requestUrl = _providerConfig.BaseUrl.CombineUrls(url);
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
 
         var requestBody = JsonConvert.SerializeObject(request);
         var content = new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json");
 
-        var response = await _httpClient.PostAsync(requestUrl, content);
+        var response = await _httpClient.PostAsync(requestUrl, content, token);
 
         // Timeout or failed request check
         response.EnsureSuccessStatusCode();
 
-        var responseBody = await response.Content.ReadAsStringAsync();
+        var responseBody = await response.Content.ReadAsStringAsync(token);
         return JsonConvert.DeserializeObject<TResponse>(responseBody)!;
     }
 
     public async Task<TResponse> PutAsync<TRequest, TResponse>(string url, TRequest request, CancellationToken token = default) where TRequest : class where TResponse : class
     {
-        var requestUrl = _providerConfig.BaseUrl.CombineUrls(url);
+        var requestUrl = ProviderConfig.BaseUrl.CombineUrls(url);
 
         var requestBody = JsonConvert.SerializeObject(request);
         var content = new StringContent(requestBody, System.Text.Encoding.UTF8, "application/json");
 
-        var response = await _httpClient.PutAsync(requestUrl, content);
+        var response = await _httpClient.PutAsync(requestUrl, content, token);
 
         // Timeout or failed request check
         response.EnsureSuccessStatusCode();
 
-        var responseBody = await response.Content.ReadAsStringAsync();
+        var responseBody = await response.Content.ReadAsStringAsync(token);
         return JsonConvert.DeserializeObject<TResponse>(responseBody)!;
     }
 }

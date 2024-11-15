@@ -11,6 +11,6 @@ public class SearchController(IFlightSearchService _flightSearchProvider) : Cont
     [HttpGet]
     public async Task<IActionResult> SearchFlights([FromQuery] FlightSearchRequest request)
     {
-        return Ok(await _flightSearchProvider.SearchFlightsAsync(request.Origin, request.Destination, request.DepartureDate));
+        return Ok(await _flightSearchProvider.SearchFlightsAsync(request));
     }
 }

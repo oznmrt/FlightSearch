@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Common\FlightSearch.Common.Application\FlightSearch.Common.Application.csproj" />
     <ProjectReference Include="..\Common\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj" />
   </ItemGroup>

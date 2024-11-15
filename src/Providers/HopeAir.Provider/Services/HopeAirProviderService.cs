@@ -16,9 +16,9 @@ public class HopeAirProviderService(IProviderMockGenerator mockGenerator) : Flig
         return flightData!.Flights.FlightList;
     }
 
-    protected override Task<string> GetFlightDataAsync(string origin, string destination, DateTime departureDate)
+    protected override Task<string> GetFlightDataAsync(string origin, string destination, DateTime departureDate, DateTime returnDate, int passengerCount)
     {
         // API call for SOAP service
-        return Task.FromResult(_mockGenerator.GenerateMockResponse(origin, destination, departureDate));
+        return Task.FromResult(_mockGenerator.GenerateMockResponse(origin, destination, departureDate, returnDate, passengerCount));
     }
 }

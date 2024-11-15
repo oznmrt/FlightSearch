@@ -16,9 +16,9 @@ public static class HttpClientBootstrapper
         services.AddScoped(sp => sp.GetRequiredService<IOptionsSnapshot<ClientConfig>>().Value);
 
         // Configure the HttpClient for each provider and add it to DI
-        services.AddHttpClient<BaseHttpClient>((serviceProvider, client) =>
+        services.AddHttpClient<BaseHttpClient>((_, client) =>
         {
-            client.Timeout = TimeSpan.FromSeconds(30); // Set default timeout or configure it in your provider
+            client.Timeout = TimeSpan.FromSeconds(ClientConfig.DefaultTimeout); // Set default timeout or configure it in your provider
         });
 
         // Register the custom HTTP clients for HopeAir and AybJet

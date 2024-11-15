@@ -1,3 +1,5 @@
+using FlightSearch.API.Services;
+using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.GenericHttpClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<IFlightSearchService, FlightSearchService>();
 
 builder.Services.AddHttpClients(builder.Configuration);
 

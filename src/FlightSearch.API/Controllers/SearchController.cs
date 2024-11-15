@@ -1,20 +1,19 @@
 ﻿using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.Core.Models;
-using FlightSearch.Common.GenericHttpClient.HttpClients.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlightSearch.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class SearchController(IAybJetHttpClient aybJetHttpClient) : ControllerBase
+public class SearchController(IFlightSearchService flightSearchService) : ControllerBase
 {
-    private readonly IAybJetHttpClient _aybJetHttpClient = aybJetHttpClient;
+    private readonly IFlightSearchService _flightSearchService = flightSearchService;
 
     [HttpGet]
     public async Task<IActionResult> SearchFlights([FromQuery] FlightSearchRequest request)
     {
-        var test = await _aybJetHttpClient.GetAsync<string>("");
-        return Ok();
+        return Ok(await _flightSearchService.SearchFlightsAsync(request));
     }
 }

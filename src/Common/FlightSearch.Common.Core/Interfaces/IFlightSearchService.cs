@@ -4,5 +4,5 @@ namespace FlightSearch.Common.Core.Interfaces;
 
 public interface IFlightSearchService
 {
-    Task<IEnumerable<IFlightData>> SearchFlightsAsync(string origin, string destination, DateTime departureDate);
+    Task<IEnumerable<IFlightData>> SearchFlightsAsync(FlightSearchRequest request, CancellationToken cancellationToken = default);
 }

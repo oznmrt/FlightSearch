@@ -6,9 +6,9 @@ namespace FlightSearch.Common.MockGenerator.Providers;
 
 public class SoapProviderMockDataGenerator : IProviderMockGenerator
 {
-    public string GenerateMockResponse(string origin, string destination, DateTime departureDate)
+    public string GenerateMockResponse(string origin, string destination, DateTime departureDate, DateTime returnDate, int passengerCount)
     {
-        var flightList = FlightMockDataGenerator.GenerateMockFlights(ProviderConstants.HopeAir, origin, destination, departureDate);
+        var flightList = FlightMockDataGenerator.GenerateMockFlights(ProviderConstants.HopeAir, origin, destination, departureDate, returnDate, passengerCount);
 
         // Define the namespaces
         XNamespace soapenv = "http://schemas.xmlsoap.org/soap/envelope/";

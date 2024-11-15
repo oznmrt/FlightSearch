@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj" />
-    <ProjectReference Include="..\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj" />
+    <Compile Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <None Remove="Interfaces\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj" />
+    <ProjectReference Include="..\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -25,7 +25,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.MockGen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Application", "src\Common\FlightSearch.Common.Application\FlightSearch.Common.Application.csproj", "{AC0CCB87-A574-4694-9C1F-24517D7D4A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.GenericHttpClient", "src\Common\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj", "{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.GenericHttpClient", "src\Common\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj", "{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AybJet.Provider.Tests", "src\tests\AybJet.Provider.Tests\AybJet.Provider.Tests.csproj", "{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HopeAir.Provider.Tests", "src\tests\HopeAir.Provider.Tests\HopeAir.Provider.Tests.csproj", "{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.API.Tests", "src\tests\FlightSearch.API.Tests\FlightSearch.API.Tests.csproj", "{1E6C3433-3832-4010-8E66-566DC51CDD46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.Application.Tests", "src\tests\FlightSearch.Common.Application.Tests\FlightSearch.Common.Application.Tests.csproj", "{171CFB64-459E-46F8-8014-D884F787E3E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +73,22 @@ Global
 		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6C3433-3832-4010-8E66-566DC51CDD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6C3433-3832-4010-8E66-566DC51CDD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6C3433-3832-4010-8E66-566DC51CDD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6C3433-3832-4010-8E66-566DC51CDD46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171CFB64-459E-46F8-8014-D884F787E3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171CFB64-459E-46F8-8014-D884F787E3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171CFB64-459E-46F8-8014-D884F787E3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171CFB64-459E-46F8-8014-D884F787E3E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +104,10 @@ Global
 		{612F4AF0-6027-4378-8539-EE4A1A6E6430} = {62268EBE-3512-491F-92FF-A44D65FE0565}
 		{AC0CCB87-A574-4694-9C1F-24517D7D4A7B} = {62268EBE-3512-491F-92FF-A44D65FE0565}
 		{13CB10CB-8A0B-42EA-8209-5EFFB12F2074} = {62268EBE-3512-491F-92FF-A44D65FE0565}
+		{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
+		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
+		{1E6C3433-3832-4010-8E66-566DC51CDD46} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
+		{171CFB64-459E-46F8-8014-D884F787E3E2} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04054210-8AE4-4069-8FC0-C2A28991FC3A}

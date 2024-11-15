@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj" />
+    <ProjectReference Include="..\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

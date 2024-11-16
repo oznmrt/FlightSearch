@@ -1,9 +1,9 @@
-﻿using FlightSearch.API.Extensions;
-using FlightSearch.Common.Core.Interfaces;
+﻿using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.Core.Models;
 using FlightSearch.Common.GenericHttpClient.HttpClients.Interfaces;
+using FlightSearch.Common.Utilities.Extensions;
 
-namespace FlightSearch.API.Services;
+namespace FlightSearch.Common.Application.Services;
 
 public class FlightSearchService(IAybJetHttpClient aybJetHttpClient, IHopeAirHttpClient hopeAirHttpClient) : IFlightSearchService
 {

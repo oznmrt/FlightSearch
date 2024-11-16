@@ -1,4 +1,4 @@
-using FlightSearch.API.Services;
+using FlightSearch.Common.Application.Services;
 using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.GenericHttpClient;
 

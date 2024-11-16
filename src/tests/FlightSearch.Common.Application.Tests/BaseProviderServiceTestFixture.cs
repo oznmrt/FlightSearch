@@ -1,13 +1,13 @@
 ﻿namespace FlightSearch.Common.Application.Tests;
 
-public class FlightSearchTestFixture : IDisposable
+public class BaseProviderServiceTestFixture : IDisposable
 {
     // Common mock data for the tests
     public FlightSearchRequest DefaultFlightSearchRequest { get; private set; }
     public List<IFlightData> MockFlightData { get; private set; }
     public string MockResponse { get; private set; }
 
-    public FlightSearchTestFixture()
+    public BaseProviderServiceTestFixture()
     {
         // Initialize common mock data
         DefaultFlightSearchRequest = new FlightSearchRequest

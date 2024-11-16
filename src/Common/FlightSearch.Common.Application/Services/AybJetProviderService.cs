@@ -1,24 +1,24 @@
 ﻿using FlightSearch.Common.Application.Providers;
 using FlightSearch.Common.Core.Models;
+using FlightSearch.Common.Core.Models.AybJet;
 using FlightSearch.Common.MockGenerator;
-using FlightSearch.Common.Utilities.Extensions;
-using HopeAir.Provider.Models;
+using Newtonsoft.Json;
 
-namespace HopeAir.Provider.Services;
+namespace FlightSearch.Common.Application.Services;
 
-public class HopeAirProviderService(IProviderMockGenerator mockGenerator) : FlightSearchProvider
+public class AybJetProviderService(IProviderMockGenerator mockGenerator) : BaseProviderService
 {
     private readonly IProviderMockGenerator _mockGenerator = mockGenerator;
 
-    protected override IEnumerable<IFlightData> ConvertResponseToFlights(string response)
+    protected override List<FlightData> ConvertResponseToFlights(string response)
     {
-        var flightData = response.ConvertSoapXML<GetFlightInfoResponse>();
-        return flightData!.Flights.FlightList;
+        var flightData = JsonConvert.DeserializeObject<AybJetApiResponse>(response);
+        return flightData!.Flights;
     }
 
     protected override Task<string> GetFlightDataAsync(string origin, string destination, DateTime departureDate, DateTime returnDate, int passengerCount)
     {
-        // API call for SOAP service
+        // API call for REST service
         return Task.FromResult(_mockGenerator.GenerateMockResponse(origin, destination, departureDate, returnDate, passengerCount));
     }
 }

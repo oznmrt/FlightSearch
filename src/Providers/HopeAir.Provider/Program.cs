@@ -1,7 +1,6 @@
-using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Application.Services;
 using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.MockGenerator;
-using HopeAir.Provider.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

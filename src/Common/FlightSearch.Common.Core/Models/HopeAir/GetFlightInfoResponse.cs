@@ -1,7 +1,7 @@
 ﻿using FlightSearch.Common.Core.Models;
 using System.Xml.Serialization;
 
-namespace HopeAir.Provider.Models;
+namespace FlightSearch.Common.Core.Models.HopeAir;
 
 [XmlRoot("GetFlightInfoResponse", Namespace = "http://skyblue.com/flight")]
 public class GetFlightInfoResponse

@@ -3,7 +3,7 @@ using FlightSearch.Common.Core.Models;
 
 namespace FlightSearch.Common.Application.Providers;
 
-public abstract class FlightSearchProvider : IFlightSearchService
+public abstract class BaseProviderService : IFlightSearchService
 {
     public async Task<IEnumerable<IFlightData>> SearchFlightsAsync(FlightSearchRequest request, CancellationToken cancellationToken = default)
     {

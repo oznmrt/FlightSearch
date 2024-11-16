@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FlightSearch.Common.Core\FlightSearch.Common.Core.csproj" />
+    <ProjectReference Include="..\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj" />
+    <ProjectReference Include="..\FlightSearch.Common.MockGenerator\FlightSearch.Common.MockGenerator.csproj" />
     <ProjectReference Include="..\FlightSearch.Common.Utilities\FlightSearch.Common.Utilities.csproj" />
   </ItemGroup>
 

@@ -1,10 +1,10 @@
 namespace FlightSearch.Common.Application.Tests;
 
-public class FlightSearchProviderTests : IClassFixture<FlightSearchTestFixture>
+public class BaseProviderServiceTests : IClassFixture<BaseProviderServiceTestFixture>
 {
-    private readonly FlightSearchTestFixture _fixture;
+    private readonly BaseProviderServiceTestFixture _fixture;
 
-    public FlightSearchProviderTests(FlightSearchTestFixture fixture)
+    public BaseProviderServiceTests(BaseProviderServiceTestFixture fixture)
     {
         _fixture = fixture;
     }
@@ -13,7 +13,7 @@ public class FlightSearchProviderTests : IClassFixture<FlightSearchTestFixture>
     public async Task SearchFlightsAsync_ShouldReturnConvertedFlightData()
     {
         // Arrange
-        var provider = new TestFlightSearchProvider(_fixture.MockResponse, _fixture.MockFlightData);
+        var provider = new TestBaseProviderService(_fixture.MockResponse, _fixture.MockFlightData);
 
         // Act
         var flights = await provider.SearchFlightsAsync(_fixture.DefaultFlightSearchRequest);
@@ -26,7 +26,7 @@ public class FlightSearchProviderTests : IClassFixture<FlightSearchTestFixture>
     public async Task SearchFlightsAsync_ShouldThrowNullReferenceException_WhenRequestIsNull()
     {
         // Arrange
-        var provider = new TestFlightSearchProvider(_fixture.MockResponse, _fixture.MockFlightData);
+        var provider = new TestBaseProviderService(_fixture.MockResponse, _fixture.MockFlightData);
 
         // Act & Assert
         await Assert.ThrowsAsync<NullReferenceException>(() => provider.SearchFlightsAsync(null));
@@ -36,7 +36,7 @@ public class FlightSearchProviderTests : IClassFixture<FlightSearchTestFixture>
     public async Task SearchFlightsAsync_ShouldReturnEmptyList_WhenNoData()
     {
         // Arrange
-        var provider = new TestFlightSearchProvider(_fixture.MockResponse, new List<IFlightData>());
+        var provider = new TestBaseProviderService(_fixture.MockResponse, new List<IFlightData>());
 
         // Act
         var flights = await provider.SearchFlightsAsync(_fixture.DefaultFlightSearchRequest);

@@ -1,4 +1,4 @@
-﻿namespace FlightSearch.API.Extensions;
+﻿namespace FlightSearch.Common.Utilities.Extensions;
 
 public static class ApiExtensions
 {

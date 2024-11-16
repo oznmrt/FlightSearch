@@ -1,6 +1,4 @@
-﻿using FlightSearch.Common.Core.Models;
-
-namespace AybJet.Provider.Models;
+﻿namespace FlightSearch.Common.Core.Models.AybJet;
 
 public class AybJetApiResponse
 {

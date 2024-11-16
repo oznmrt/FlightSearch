@@ -1,5 +1,5 @@
-using AybJet.Provider.Services;
 using FlightSearch.Common.Application.Providers;
+using FlightSearch.Common.Application.Services;
 using FlightSearch.Common.Core.Interfaces;
 using FlightSearch.Common.MockGenerator;
 

@@ -1,11 +1,11 @@
 ﻿namespace FlightSearch.Common.Application.Tests;
 
-public class TestFlightSearchProvider : FlightSearchProvider
+public class TestBaseProviderService : BaseProviderService
 {
     private readonly string _mockResponse;
     private readonly IEnumerable<IFlightData> _mockFlights;
 
-    public TestFlightSearchProvider(string mockResponse, IEnumerable<IFlightData> mockFlights)
+    public TestBaseProviderService(string mockResponse, IEnumerable<IFlightData> mockFlights)
     {
         _mockResponse = mockResponse;
         _mockFlights = mockFlights;

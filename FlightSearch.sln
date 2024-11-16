@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF53CEEA-41F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{361C0F5D-A945-4D7B-8FCA-32230BD6D747}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.API", "src\FlightSearch.API\FlightSearch.API.csproj", "{8BD33D85-5235-4318-81BE-962441F648B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.API", "src\Services\FlightSearch.API\FlightSearch.API.csproj", "{8BD33D85-5235-4318-81BE-962441F648B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HopeAir.Provider", "src\Providers\HopeAir.Provider\HopeAir.Provider.csproj", "{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HopeAir.Provider", "src\Services\Providers\HopeAir.Provider\HopeAir.Provider.csproj", "{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AybJet.Provider", "src\Providers\AybJet.Provider\AybJet.Provider.csproj", "{14727301-43C0-4B48-AFC5-1CDD09EB1E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AybJet.Provider", "src\Services\Providers\AybJet.Provider\AybJet.Provider.csproj", "{14727301-43C0-4B48-AFC5-1CDD09EB1E33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{62268EBE-3512-491F-92FF-A44D65FE0565}"
 EndProject
@@ -27,13 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.GenericHttpClient", "src\Common\FlightSearch.Common.HttpClient\FlightSearch.Common.GenericHttpClient.csproj", "{13CB10CB-8A0B-42EA-8209-5EFFB12F2074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AybJet.Provider.Tests", "src\tests\AybJet.Provider.Tests\AybJet.Provider.Tests.csproj", "{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AybJet.Provider.Tests", "src\tests\AybJet.Provider.Tests\AybJet.Provider.Tests.csproj", "{2919D1BF-7EF4-4F4A-B83D-A5ABE955C4EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HopeAir.Provider.Tests", "src\tests\HopeAir.Provider.Tests\HopeAir.Provider.Tests.csproj", "{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HopeAir.Provider.Tests", "src\tests\HopeAir.Provider.Tests\HopeAir.Provider.Tests.csproj", "{93B30A75-A44A-479A-B0BB-911CEDB0B6B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.API.Tests", "src\tests\FlightSearch.API.Tests\FlightSearch.API.Tests.csproj", "{1E6C3433-3832-4010-8E66-566DC51CDD46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.API.Tests", "src\tests\FlightSearch.API.Tests\FlightSearch.API.Tests.csproj", "{1E6C3433-3832-4010-8E66-566DC51CDD46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSearch.Common.Application.Tests", "src\tests\FlightSearch.Common.Application.Tests\FlightSearch.Common.Application.Tests.csproj", "{171CFB64-459E-46F8-8014-D884F787E3E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightSearch.Common.Application.Tests", "src\tests\FlightSearch.Common.Application.Tests\FlightSearch.Common.Application.Tests.csproj", "{171CFB64-459E-46F8-8014-D884F787E3E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{762BB75C-8ACD-49F1-8DC6-CF69F3B1BB79}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ACBBF203-5723-4DEA-9B04-D513794DC35A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,13 +93,17 @@ Global
 		{171CFB64-459E-46F8-8014-D884F787E3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171CFB64-459E-46F8-8014-D884F787E3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{171CFB64-459E-46F8-8014-D884F787E3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBBF203-5723-4DEA-9B04-D513794DC35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBBF203-5723-4DEA-9B04-D513794DC35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBBF203-5723-4DEA-9B04-D513794DC35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBBF203-5723-4DEA-9B04-D513794DC35A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8BD33D85-5235-4318-81BE-962441F648B1} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
-		{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
+		{8BD33D85-5235-4318-81BE-962441F648B1} = {762BB75C-8ACD-49F1-8DC6-CF69F3B1BB79}
+		{BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC} = {762BB75C-8ACD-49F1-8DC6-CF69F3B1BB79}
 		{80ABFF64-79DB-420A-B9DF-0C9B1A48A89A} = {BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}
 		{14727301-43C0-4B48-AFC5-1CDD09EB1E33} = {BEA1FFE6-B38A-4D9D-AF27-1283101CB6BC}
 		{62268EBE-3512-491F-92FF-A44D65FE0565} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
@@ -108,6 +116,7 @@ Global
 		{93B30A75-A44A-479A-B0BB-911CEDB0B6B3} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
 		{1E6C3433-3832-4010-8E66-566DC51CDD46} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
 		{171CFB64-459E-46F8-8014-D884F787E3E2} = {361C0F5D-A945-4D7B-8FCA-32230BD6D747}
+		{762BB75C-8ACD-49F1-8DC6-CF69F3B1BB79} = {EF53CEEA-41FD-40C6-8BF9-983DEA2DF5DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04054210-8AE4-4069-8FC0-C2A28991FC3A}

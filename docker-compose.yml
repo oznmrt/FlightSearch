@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  flightsearch-api:
+    build:
+      context: .
+      dockerfile: src/Services/FlightSearch.API/Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - flightsearch-net
+
+  hopeair-provider:
+    build:
+      context: .
+      dockerfile: src/Services/Providers/HopeAir.Provider/Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - flightsearch-net
+
+  aybjet-provider:
+    build:
+      context: .
+      dockerfile: src/Services/Providers/AybJet.Provider/Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - flightsearch-net
+
+
+networks:
+  flightsearch-net:
+    driver: bridge

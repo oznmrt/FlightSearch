@@ -1,6 +1,4 @@
-Project Setup and Implementation
-
-# FlightSearch Microservices
+# Flight Search API - Code Case Documentation
 
 This project is designed with three microservices to simulate a flight search functionality:
 

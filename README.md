@@ -49,6 +49,15 @@ For large datasets returned by providers, an **asynchronous data flow** can be i
 - **Producer**: Initiates the data flow by querying providers asynchronously.
 - **Consumer**: Processes and combines the retrieved data asynchronously for a quicker response to the user.
 
+### Logging Structure
+To ensure better observability and troubleshooting, a centralized and consistent logging structure can be implemented:
+
+- **Centralized Logging**: Use a logging framework such as Serilog, NLog, or Microsoft.Extensions.Logging to ensure all logs are directed to a centralized location (e.g., Elasticsearch, Application Insights, or a file-based system).
+
+### Error Handling Structure
+Robust error management ensures the application can handle unexpected scenarios gracefully while providing meaningful feedback to users and logs for developers:
+
+By implementing a structured logging and error handling mechanism, the system can become more reliable, maintainable, and easier to troubleshoot in production environments.
 
 ## Building and Running the Services
 

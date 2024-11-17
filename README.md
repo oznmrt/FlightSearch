@@ -35,6 +35,9 @@ Timeout Management: The default timeout for provider API requests is set to Time
 }
 ```
 
+### Unit Tests
+Unit test projects utilize the xUnit framework and the Moq library for mocking dependencies during tests.
+
 ## Future Improvements and Considerations
 
 ### Clean Architecture

@@ -1,4 +1,4 @@
-# Project Setup and Implementation
+Project Setup and Implementation
 
 # FlightSearch Microservices
 
@@ -35,6 +35,7 @@ Timeout Management: The default timeout for provider API requests is set to Time
     }
   }
 }
+```
 
 ## Future Improvements and Considerations
 
@@ -57,6 +58,7 @@ Open your terminal and navigate to the root of the project where the `docker-com
 
 ```bash
 docker-compose up --build
+```
 This will build the images for all the services defined in the docker-compose.yml file and start the containers.
 
 ### Access the Services
@@ -70,4 +72,5 @@ Once the containers are running, you can access the services locally via the fol
 ### Stopping the Containers
 ```bash
 docker-compose down
+```
 This will stop and remove the containers but retain the images, allowing you to restart the services later without needing to rebuild them.

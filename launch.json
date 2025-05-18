@@ -4,21 +4,26 @@
     {
       "type": "coreclr",
       "request": "launch",
-      "name": "Launch .NET Project",
-      "program": "${workspaceFolder}/src/Services/${input:executableName}/bin/Debug/net8.0/${input:executableName}.dll",
-      "preLaunchTask": "build"
+      "name": ".NET Launch with Env",
+      "program": "${workspaceFolder}/src/Services/${input:projectName}/bin/Debug/net8.0/${input:projectName}.dll",
+      "preLaunchTask": "build",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "${input:envName}"
+      }
     }
   ],
   "inputs": [
     {
-      "id": "executableName",
+      "id": "projectName",
       "type": "pickString",
-      "description": "Select the project to debug",
-      "options": [
-        "FlightSearch.API",
-        "AybJet.Provider",
-        "HopeAir.Provider"
-      ]
+      "description": "Select project to run",
+      "options": ["FlightSearch.API", "AybJet.Provider", "HopeAir.Provider"]
+    },
+    {
+      "id": "envName",
+      "type": "pickString",
+      "description": "Select environment",
+      "options": ["Development", "Test", "Local", "Production"]
     }
   ]
 }

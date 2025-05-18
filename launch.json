@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Launch .NET Project",
+      "program": "${workspaceFolder}/src/Services/${input:executableName}/bin/Debug/net8.0/${input:executableName}.dll",
+      "preLaunchTask": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "executableName",
+      "type": "pickString",
+      "description": "Select the project to debug",
+      "options": [
+        "FlightSearch.API",
+        "AybJet.Provider",
+        "HopeAir.Provider"
+      ]
+    }
+  ]
+}

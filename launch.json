@@ -6,6 +6,7 @@
       "request": "launch",
       "name": ".NET Launch with Env",
       "program": "${workspaceFolder}/src/Services/${input:projectName}/bin/Debug/net8.0/${input:projectName}.dll",
+      "cwd": "${workspaceFolder}/src/${input:projectName}",
       "preLaunchTask": "build",
       "env": {
         "ASPNETCORE_ENVIRONMENT": "${input:envName}"

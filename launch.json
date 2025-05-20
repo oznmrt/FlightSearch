@@ -28,3 +28,45 @@
     }
   ]
 }
+
+---
+
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Roof.Admin.Api - DEV",
+      "program": "${workspaceFolder}/src/Roof.Admin.Api/bin/Debug/net8.0/Roof.Admin.Api.dll",
+      "cwd": "${workspaceFolder}/src/Roof.Admin.Api",
+      "preLaunchTask": "dotnet: build",
+      "env": {
+        "ASPNETCORE_URLS": "http://localhost:4123",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Roof.Admin.Consumer - DEV",
+      "program": "${workspaceFolder}/src/Roof.Admin.Consumer/bin/Debug/net8.0/Roof.Admin.Consumer.dll",
+      "cwd": "${workspaceFolder}/src/Roof.Admin.Consumer",
+      "preLaunchTask": "dotnet: build",
+      "env": {
+        "ASPNETCORE_URLS": "http://localhost:4124",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+  ],
+  "compounds": [
+    {
+      "name": "API - Consumer - DEV",
+      "configurations": [
+        "Roof.Admin.Api - DEV",
+        "Roof.Admin.Consumer - DEV"
+      ]
+    }
+  ]
+}
